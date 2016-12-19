@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+	<style>
+	 .chartWithOverlay {
+           position: relative;
+           width: 700px;
+    }
+    .overlay {
+           width: 200px;
+           height: 200px;
+           position: absolute;
+           top: 235px;   /* chartArea top  */
+           right: 165px; /* chartArea left */
+    }
+	</style>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+ 	<!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+    
+	<script src="CRIMESgraph.js"></script>
+	<script src="ARRESTEDgraph.js"></script>
+	<script src="ARRESTSANDCRIMESgraph.js"></script>
+	<script src="primarytype_topcrimes.js"></script>
+	<script src="districtwise_crimes.js"></script>
+	<script src="theft_crimes_locations.js"></script>
+	<script src="general.js"></script>
+    </head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-lg-4"></div>
+		<div class="col-md-4 col-lg-4">
+ 		<div class="dropdown">
+  			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    		Dropdown
+    		<span class="caret"></span>
+  			</button>
+  			<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    			<li><a href="#" id="g1" onClick="myFunct(chart_div1)">Crimes</a></li>
+    			<li><a href="#" id="g2" onClick="myFunct(chart_div2)">Arrests</a></li>
+    			<li><a href="#" id="g3" onClick="myFunct(chart_div3)">Crimes and Arrests</a></li>
+    			<li><a href="#" id="g4" onClick="myFunct(chart_div4)">Share of Crimes</a></li>
+    			<li><a href="#" id="g5" onClick="myFunct(chart_div5)">District wise crimes</a></li>
+    			<li><a href="#" id="g6" onClick="myFunct(chart_div6)">Thefts at locations</a></li>
+  			</ul>
+			</div>
+	<!-- 		<select>
+			  <option value="chart_div1" onSelect=>Volvo</option>
+			  <option value="chart_div2">Saab</option>
+			  <option value="chart_div3">Mercedes</option>
+			  <option value="chart_div4">Audi</option>
+			</select>
+			-->
+		</div>
+		<div class="col-md-4 col-lg-4"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-12" >
+			<div id="chart_div1" class="all" style="width: 10%; height: 500px;"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<div id="chart_div2" class="all" style="width: 100%; height: 500px;"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<div id="chart_div3" class="all" style="width: 100%; height: 500px;"></div>
+		</div>
+	</div> 
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<div id="chart_div4" class="all" style="width: 100%; height: 500px;"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<div id="chart_div5" class="all" style="width: 100%; height: 500px;"></div>
+		</div>
+	</div> 
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<div id="chart_div6" class="all" style="width: 100%; height: 500px;"></div>
+		</div>
+	</div>
+	<div class="overlay">
+    <div style="color: #444; font-family:'Arial Black'; font-size: 12px; letter-spacing: .15em; margin-top:15px; margin-left:5px;">*current year</div>
+  </div> 
+</div>
+</body>
+</html>
