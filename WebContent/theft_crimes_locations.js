@@ -14,7 +14,7 @@
       function drawChart() {
     	   // grab the CSV
     	  
-    	   $.get("theft_crimes_locations.csv", function(csvString) {
+    	   $.get("theft_crimes_location.csv", function(csvString) {
     	      // transform the CSV string into a 2-dimensional array
     	      var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
 

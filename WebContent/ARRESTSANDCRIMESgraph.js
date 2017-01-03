@@ -25,7 +25,7 @@
     	     var options = {
     	        width: 1000,
     	    	height: 400,
-    	    	bar: {groupWidth: '85%'},
+    	    	bar: {groupWidth: '15%'},
     	    	series: {
     	            0: { axis: 'ARRESTS' }, // Bind series 0 to an axis named 'distance'.
     	            1: { axis: 'CRIMES' } // Bind series 1 to an axis named 'brightness'.
